@@ -1,7 +1,7 @@
 var db = require('../db.js');
 
 save_user_information = (data) => new Promise((resolve,reject)=>{
-  db.query('INSERT INTO Lottery_information SET ?', data, function(err,results, fields){
+  db.query('INSERT INTO lottery_information SET ?', data, function(err,results, fields){
     if(err){
         reject('could not insert into lottery information');
     }
@@ -9,6 +9,6 @@ save_user_information = (data) => new Promise((resolve,reject)=>{
   });
 })
 
-module.exports {
+module.exports = {
   save_user_information
 }
